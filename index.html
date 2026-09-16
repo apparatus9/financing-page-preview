@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Financing Page Preview</title>
+<meta name="description" content="Good or bad credit considered. Pre-qualify in about 60 seconds to see financing options. Checking your options won’t affect your credit score. All financing on approved credit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --ground:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#E7EDF6;
+  --soft-band:#FFFFFF;
+  --ink:#1E293B;
+  --muted:#5B6678;
+  --line:#D8E0EC;
+  --blue:#2563EB;
+  --blue-2:#1D4ED8;
+  --blue-deep:#1E40AF;
+  --blue-ink:#FFFFFF;
+  --blue-soft:#E3ECFD;
+  --green:#55CA7C;
+  --green-ink:#10233A;
+  --green-deep:#35824E;
+  --green-soft:#E3F6E9;
+  --footer:#0F172A;
+  --error:#B3261E;
+  --shadow:0 1px 2px rgba(30,41,59,.06),0 18px 48px -18px rgba(37,99,235,.3);
+  --lift:0 2px 4px rgba(30,41,59,.05),0 22px 40px -20px rgba(37,99,235,.35);
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 1.0625rem/1.55 var(--body);padding-bottom:88px}
+@media (min-width:900px){body{padding-bottom:0}}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.02;letter-spacing:-.01em}
+.eyebrow{font:700 .78rem/1 var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--blue)}
+
+/* ========== HERO ========== */
+.hero-band{background:var(--ground);color:var(--ink)}
+.hero-band>.wrap{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.hero-band .hero{flex:1}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--display);font-weight:700;font-variation-settings:"wdth" 110;font-size:1.2rem;text-decoration:none;display:flex;align-items:center;gap:10px;color:var(--ink)}
+.brand-mark{width:32px;height:32px;border-radius:9px;background:var(--green);color:#10233A;display:grid;place-items:center;transform:rotate(-6deg)}
+.brand-mark svg{width:19px;height:19px}
+.brand b{font-weight:900;color:var(--blue)}
+.call{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:10px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;transition:border-color .2s}
+.call:hover{border-color:var(--blue)}
+.call svg{width:16px;height:16px;color:var(--blue)}
+.call .lbl{color:var(--muted);font-weight:400}
+@media (max-width:520px){.call .lbl{display:none}}
+
+.hero{display:grid;grid-template-columns:1fr;gap:40px;padding-block:16px 64px;align-items:center}
+@media (min-width:900px){.hero{grid-template-columns:1.3fr .7fr;gap:64px;padding-block:40px 88px}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-cta .btn{flex:none}
+.btn-outline{background:var(--surface);color:var(--ink);border:1.5px solid var(--line);font-variant-numeric:tabular-nums}
+.btn-outline:hover{border-color:var(--blue)}
+.glass{display:flex;flex-direction:column;gap:20px;padding:22px;border-radius:22px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
+.glass-gauge{display:flex;align-items:center;gap:14px;padding:14px 16px 14px 14px;border-radius:16px;background:var(--blue-soft);color:var(--ink)}
+.glass-gauge strong{display:block;font-size:1rem;line-height:1.2}
+.glass-gauge span{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.glass .checks{grid-template-columns:1fr;gap:14px;padding-inline:4px}
+.pitch{display:flex;flex-direction:column;gap:24px;padding-top:8px}
+.glass-lead{display:flex;flex-direction:column;gap:7px;padding:2px 4px 4px}
+.glass-lead .kicker{font:800 .74rem/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.glass-lead p{margin:0;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 104;font-size:1.14rem;line-height:1.25;color:var(--ink);text-wrap:balance}
+h1{font-size:clamp(2.6rem,6.6vw,4.8rem);font-weight:900;font-variation-settings:"wdth" 114;line-height:.98}
+.stamp{display:inline-block;color:#10233A;background:var(--green);padding:.02em .18em .06em;border-radius:.14em;transform:rotate(-3deg);white-space:nowrap}
+.lede{font-size:1.22rem;color:var(--muted);max-width:36ch;margin:0}
+.lede strong{color:var(--ink)}
+.checks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;max-width:540px}
+.checks li{display:flex;gap:10px;align-items:center;font-weight:700;line-height:1.25}
+.checks i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--green);color:#10233A;display:grid;place-items:center}
+.checks svg{width:14px;height:14px}
+.promise{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.92rem;color:var(--muted);margin:0;padding:0;list-style:none}
+.promise li{display:flex;align-items:center;gap:7px}
+.promise li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+
+/* Form card */
+.dealer-id{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0;padding-block:12px;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.dealer-id b{color:var(--ink);font-weight:700}
+.legal{margin:16px 0 0;font-size:.82rem;color:var(--muted);max-width:62ch;line-height:1.45}
+.apply-band{background:var(--soft-band)}
+.band.apply-band{padding-block:56px}
+.apply-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:start}
+@media (min-width:900px){.apply-grid{grid-template-columns:.85fr 1.15fr;gap:64px}}
+.apply-intro .sec-head{margin-bottom:24px}
+.apply-intro .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem)}
+.assure{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.assure li{display:flex;gap:14px;align-items:flex-start}
+.assure i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--green-soft);color:var(--green-deep);display:grid;place-items:center}
+.assure svg{width:20px;height:20px}
+.assure span{display:flex;flex-direction:column;color:var(--muted);font-size:.95rem;line-height:1.4}
+.assure strong{color:var(--ink);font-size:1.02rem}
+@media (max-width:899px){.assure{display:none}.apply-intro .sec-head{margin-bottom:0}}
+.apply-wrap{position:relative;max-width:620px;width:100%}
+.apply{position:relative;background:var(--surface);color:var(--ink);border-radius:20px;box-shadow:0 30px 60px -28px rgba(37,99,235,.45),0 0 0 1px var(--line);overflow:hidden;scroll-margin-top:28px}
+.apply :focus-visible{outline-color:var(--blue)}
+.apply::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--blue),var(--green))}
+.gauge{width:64px;height:38px;flex:none;color:var(--ink)}
+.needle{transform-origin:32px 32px;transform:rotate(58deg)}
+
+.apply-head{padding:22px 20px 0;display:flex;flex-direction:column;gap:12px}
+.apply-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.apply-title h2{font-size:1.4rem;font-weight:800;font-variation-settings:"wdth" 100}
+.stepcount{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.progress{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.progress span{height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden;position:relative}
+.progress span::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--blue),var(--blue-2));transform:scaleX(0);transform-origin:left}
+.progress span.on::after{transform:scaleX(1)}
+form{margin:0}
+.step{padding:20px;display:flex;flex-direction:column;gap:16px;border:0;margin:0;min-width:0}
+.step[hidden]{display:none!important}
+.q{display:flex;flex-direction:column;gap:10px;border:0;margin:0;padding:0;min-width:0}
+.q legend{font-weight:700;padding:0;margin-bottom:8px;font-size:1rem}
+.hint{font-weight:400;color:var(--muted);font-size:.9rem}
+
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{position:relative}
+.tile input{position:absolute;opacity:0;pointer-events:none}
+.tile label{display:flex;flex-direction:column;gap:5px;padding:12px;border:1.5px solid var(--line);border-radius:14px;cursor:pointer;height:100%;background:var(--surface);transition:border-color .15s,background .15s}
+.tile.wide label{flex-direction:row;align-items:center;gap:12px}
+.tile label:hover{border-color:var(--blue)}
+.tile .ic{width:36px;height:36px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;transition:background .15s,color .15s}
+.tile .ic svg{width:20px;height:20px}
+.tile strong{font-size:.98rem;line-height:1.2}
+.tile small{color:var(--muted);font-size:.8rem;line-height:1.3}
+.tile input:checked+label{border-color:var(--blue);background:var(--blue-soft);box-shadow:inset 0 0 0 1px var(--blue)}
+.tile input:checked+label .ic{background:var(--blue);color:#fff}
+.tile input:focus-visible+label{outline:3px solid var(--blue);outline-offset:2px}
+.tile.wide{grid-column:1/-1}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip label{display:inline-flex;align-items:baseline;gap:6px;padding:9px 13px;border:1.5px solid var(--line);border-radius:999px;cursor:pointer;font-weight:700;font-size:.95rem;background:var(--surface);transition:border-color .15s}
+.chip label span{font-weight:400;color:var(--muted);font-size:.82rem;font-variant-numeric:tabular-nums}
+.chip label:hover{border-color:var(--blue)}
+.chip input:checked+label{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip input:checked+label span{color:#fff;opacity:.85}
+.chip input:focus-visible+label{outline:3px solid var(--blue);outline-offset:2px}
+
+.scale{display:grid;grid-template-columns:260fr 100fr 100fr 140fr;gap:3px;margin-top:2px}
+.scale i{height:6px;border-radius:2px;background:var(--surface-2);transition:background .2s}
+.scale i.lit{background:var(--blue)}
+.scale i.lit:last-child,.scale i.lit:nth-child(3){background:var(--green)}
+.scale-ticks{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:4px}
+
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:420px){.grid2{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-weight:700;font-size:.92rem}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:11px;padding:12px 13px;width:100%;min-height:48px;transition:border-color .15s,box-shadow .15s}
+.field textarea{min-height:64px;resize:vertical}
+.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 18px) 21px,calc(100% - 13px) 21px;background-size:5px 5px;background-repeat:no-repeat;padding-right:36px}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--muted)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.7}
+.err{color:var(--error);font-size:.85rem}
+.err:empty{display:none}
+.invalid input,.invalid select{border-color:var(--error)}
+
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--muted);line-height:1.45}
+.consent input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--blue);flex:none}
+
+.nav{display:flex;gap:10px;align-items:center}
+.btn{position:relative;overflow:hidden;font:700 1.05rem/1 var(--body);border:0;border-radius:12px;padding:16px 20px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;min-height:52px;transition:transform .15s,box-shadow .2s,filter .2s,background .2s}
+.btn svg{width:18px;height:18px}
+.btn-go{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-2) 100%);color:#fff;flex:1;box-shadow:0 8px 20px -8px rgba(37,99,235,.6)}
+.btn-go:hover{box-shadow:0 12px 28px -8px rgba(37,99,235,.65);filter:brightness(1.06)}
+.btn-green{background:linear-gradient(135deg,#55CA7C 0%,#45A364 100%);color:#10233A;box-shadow:0 8px 20px -8px rgba(53,130,78,.7)}
+.btn-green:hover{filter:brightness(1.05);box-shadow:0 12px 28px -8px rgba(53,130,78,.75)}
+.btn-back{background:transparent;color:var(--muted);border:1.5px solid var(--line);padding-inline:16px}
+.btn-back:hover{color:var(--ink);border-color:var(--muted)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.fineprint{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.8rem;color:var(--muted);text-align:center;margin:-6px 0 0}
+.fineprint svg{width:13px;height:13px;color:var(--green-deep)}
+
+.done{padding:40px 24px 32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;position:relative}
+.done-badge{width:64px;height:64px;border-radius:50%;background:var(--green);color:#10233A;display:grid;place-items:center;box-shadow:0 0 0 10px var(--green-soft)}
+.done-badge svg{width:30px;height:30px}
+.done h2{font-size:1.9rem;font-weight:900;font-variation-settings:"wdth" 108}
+.done p{margin:0;color:var(--muted);max-width:40ch}
+
+
+/* ========== STATS ========== */
+.stats{display:grid;grid-template-columns:1fr;gap:12px 28px;margin:0;padding-block:32px}
+@media (min-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat{display:flex;align-items:center;gap:12px;font-weight:700;font-size:.98rem;line-height:1.3}
+.stat i{flex:none;width:34px;height:34px;border-radius:50%;background:var(--green-soft);color:var(--green-deep);display:grid;place-items:center}
+.stat svg{width:18px;height:18px}
+
+/* ========== SECTIONS ========== */
+.band{padding-block:80px;border-top:1px solid var(--line)}
+.band-soft{background:var(--soft-band)}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;max-width:640px}
+.sec-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:900;font-variation-settings:"wdth" 110}
+.sec-head h2 em{font-style:normal;color:var(--blue)}
+.sec-head p{margin:0;color:var(--muted);font-size:1.08rem}
+
+.situations{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.sit{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.sit:hover{border-color:var(--blue)}
+.sit .ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);margin-bottom:6px}
+.sit:nth-child(even) .ic{background:var(--green-soft);color:var(--green-deep)}
+.sit .ic svg{width:26px;height:26px}
+.sit h3{font-size:1.25rem;font-weight:800;font-variation-settings:"wdth" 102}
+.sit p{margin:0;color:var(--muted);font-size:.98rem}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:32px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{position:relative;display:flex;flex-direction:column;gap:10px;counter-increment:s}
+.steps li::before{content:counter(s);position:relative;z-index:1;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;font-family:var(--display);font-weight:900;font-size:1.6rem;box-shadow:0 0 0 7px var(--ground),0 12px 24px -8px rgba(37,99,235,.6);margin-bottom:8px}
+.steps li:last-child::before{background:linear-gradient(135deg,#55CA7C,#45A364);color:#10233A;box-shadow:0 0 0 7px var(--ground),0 12px 24px -8px rgba(53,130,78,.6)}
+@media (min-width:760px){.steps li:not(:last-child)::after{content:"";position:absolute;top:30px;left:80px;right:-20px;border-top:2px dashed var(--line)}}
+.steps h3{font-size:1.3rem;font-weight:800;font-variation-settings:"wdth" 102}
+.steps p{margin:0;color:var(--muted);max-width:34ch}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media (min-width:900px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:64px}}
+.faq-side{display:flex;flex-direction:column;gap:20px;align-self:start}
+.faq-side .sec-head{margin-bottom:0}
+.helpcard{display:flex;align-items:center;gap:14px;padding:18px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;transition:border-color .2s}
+.helpcard:hover{border-color:var(--green-deep)}
+.helpcard i{width:46px;height:46px;border-radius:50%;background:var(--green);color:#10233A;display:grid;place-items:center;flex:none}
+.helpcard svg{width:22px;height:22px}
+.helpcard span{display:flex;flex-direction:column;font-size:.9rem;color:var(--muted)}
+.helpcard strong{font-size:1.15rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding-inline:20px;transition:border-color .2s}
+.faq details[open]{border-color:var(--blue)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:700;font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-family:var(--display);font-size:1.3rem;line-height:1;transition:transform .25s,background .2s,color .2s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq details p{margin:0 0 18px;color:var(--muted);max-width:64ch}
+
+/* Closer */
+.closer{position:relative;overflow:hidden;border-radius:28px;padding:clamp(32px,6vw,64px);color:#fff;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;background:
+  radial-gradient(50% 90% at 100% 100%,rgba(85,202,124,.45),transparent 65%),
+  linear-gradient(135deg,#1E40AF 0%,#2563EB 60%,#1D4ED8 100%);box-shadow:0 30px 60px -30px rgba(37,99,235,.7)}
+.closer::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.18) 1.2px,transparent 1.2px);background-size:22px 22px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 60%);mask-image:linear-gradient(90deg,#000,transparent 60%)}
+.closer>*{position:relative}
+.closer :focus-visible{outline-color:#fff}
+.closer h2{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:900;font-variation-settings:"wdth" 114;max-width:15ch}
+.closer p{margin:10px 0 0;color:rgba(255,255,255,.85);max-width:40ch}
+.closer .actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35);font-variant-numeric:tabular-nums}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+
+footer{background:var(--footer);color:#94A3B8;font-size:.88rem;margin-top:80px}
+footer .wrap{padding-block:40px 48px;display:flex;flex-direction:column;gap:18px}
+footer .row{display:flex;flex-wrap:wrap;gap:14px 24px;justify-content:space-between;align-items:center}
+footer .brand,footer .brand b{font-size:1.05rem;color:#fff}
+footer nav{display:flex;gap:20px}
+footer nav a{color:#CBD5E1;text-decoration:none}
+footer nav a:hover{color:#fff;text-decoration:underline}
+footer p{margin:0;max-width:80ch;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)}
+footer .dealer{display:flex;flex-direction:column;gap:6px;line-height:1.5}
+footer .dealer b{color:#E2E8F0}
+footer .dealer a{color:#CBD5E1}
+footer .tag{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;letter-spacing:.08em;text-transform:uppercase;color:#fff;font-size:.9rem;margin-bottom:2px}
+footer :focus-visible{outline-color:#fff}
+
+/* Mobile dock */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--ground) 90%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .25s}
+.dock.away{transform:translateY(110%)}
+.dock .btn{min-height:48px;padding-block:12px}
+.dock .btn-call{flex:none;padding-inline:16px;background:var(--green);color:#10233A}
+.dock .btn-call svg{width:20px;height:20px}
+@media (min-width:900px){.dock{display:none}}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6.6 3.5h3l1.5 4.2-2 1.3a11 11 0 0 0 5.9 5.9l1.3-2 4.2 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 16.5v-4l2.2-5.2A2 2 0 0 1 7 6h10a2 2 0 0 1 1.8 1.3L21 12.5v4a1 1 0 0 1-1 1h-1.5M5.5 17.5H4a1 1 0 0 1-1-1M3.5 12h17M8.5 17.5h7"/><circle cx="7" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-boat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 15h18l-2.5 4.5h-13zM12 3v10M12 4l6 8h-6"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 7h15a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a2 2 0 0 1 2-2h11v3"/><path fill="none" stroke="currentColor" stroke-width="2" d="M20 11h-4a2 2 0 0 0 0 4h4"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/></symbol>
+  <symbol id="i-merge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4v4a4 4 0 0 0 4 4h6a4 4 0 0 1 4 4v4M19 4v4a4 4 0 0 1-4 4M16 17l3 3 3-3"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3.5" y="7" width="17" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M10.5 13.5 3 11l1.5-1.5 8 .5 4.5-4.5a2 2 0 0 1 3 3L15.5 13l.5 8L14.5 22.5 12 15l-3 3v2.5L7.5 22 6 18 2 16.5 3.5 15H6z"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 17a8 8 0 1 1 16 0M12 17l4-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="hero-band">
+  <div class="wrap">
+    <header class="top">
+      <a class="call" href="tel:+15555550100"><svg><use href="#i-phone"/></svg><span class="lbl">Talk to a specialist</span> 555-555-0100</a>
+    </header>
+
+    <p class="dealer-id"><b>This Dealership</b><span>Street address, city, province, postal code</span><span><a href="tel:+15555550100">555-555-0100</a></span><span><a href="mailto:email@example.com">email@example.com</a></span><span><a href="https://example.ca">example.ca</a></span></p>
+
+    <div class="hero">
+      <div class="pitch">
+        <h1>Been turned down before? Let’s find a financing option that <span class="stamp">works for you.</span></h1>
+        <p class="lede">We work with lenders who consider applicants that other financing sources decline. <strong>Pre-qualify in about 60 seconds</strong> — checking your options won’t affect your credit score.</p>
+        <div class="hero-cta">
+          <a class="btn btn-go" href="#apply">Check my options <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline" href="tel:+15555550100">Call 555-555-0100</a>
+        </div>
+        <ul class="promise">
+          <li>No obligation</li>
+          <li>100% confidential</li>
+          <li>All financing O.A.C.</li>
+        </ul>
+      </div>
+
+      <aside class="glass" aria-label="Why people choose us">
+        <div class="glass-lead">
+          <span class="kicker">Good credit · Bad credit</span>
+          <p>We work with leading lenders to help you get approved</p>
+        </div>
+        <div class="glass-gauge">
+          <svg class="gauge" viewBox="0 0 64 38" aria-hidden="true">
+            <defs><linearGradient id="gaugeGrad" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#93C5FD"/><stop offset=".55" stop-color="#2563EB"/><stop offset="1" stop-color="#55CA7C"/></linearGradient></defs>
+            <path d="M6 32a26 26 0 0 1 52 0" fill="none" stroke="url(#gaugeGrad)" stroke-width="7" stroke-linecap="round"/>
+            <line class="needle" x1="32" y1="32" x2="32" y2="13" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="32" cy="32" r="4" fill="currentColor"/>
+          </svg>
+          <div><strong>Good or bad credit</strong><span>Scores 300–900 welcome</span></div>
+        </div>
+        <ul class="checks">
+          <li><i><svg><use href="#i-check"/></svg></i>Good or bad credit considered</li>
+          <li><i><svg><use href="#i-check"/></svg></i>Self-employed applicants welcome</li>
+          <li><i><svg><use href="#i-check"/></svg></i>Fast response times</li>
+          <li><i><svg><use href="#i-check"/></svg></i>Flexible down payment options, subject to approval</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>
+
+
+<main>
+  <section class="band apply-band" id="get-started">
+    <div class="wrap apply-grid">
+      <div class="apply-intro">
+        <div class="sec-head">
+          <span class="eyebrow">Get pre-qualified</span>
+          <h2>See your financing options in <em>60 seconds.</em></h2>
+          <p>Three quick steps. No credit check to start, and no obligation to accept anything.</p>
+        </div>
+        <ul class="assure">
+          <li><i><svg><use href="#i-lock"/></svg></i><span><strong>No impact to your credit score</strong>Pre-qualifying isn’t a credit check.</span></li>
+          <li><i><svg><use href="#i-check"/></svg></i><span><strong>No obligation</strong>Compare your options, then decide.</span></li>
+          <li><i><svg><use href="#i-phone"/></svg></i><span><strong>100% confidential</strong>Your details only go to lending partners for your request.</span></li>
+        </ul>
+      </div>
+
+      <div class="apply-wrap">
+
+        <div class="apply" id="apply">
+          <div class="apply-head" id="applyHead">
+            <div class="apply-title">
+              <h2 id="stepTitle">What’s the loan for?</h2>
+              <span class="stepcount" id="stepCount">Step 1 of 3</span>
+            </div>
+            <div class="progress" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+          </div>
+
+          <form id="preQual" novalidate>
+            <!-- STEP 1 -->
+            <fieldset class="step" data-step="1" data-title="What’s the loan for?">
+              <fieldset class="q">
+                <legend class="sr">Loan type</legend>
+                <div class="tiles">
+                  <div class="tile"><input type="radio" name="loan_type" id="lt-vehicle" value="Vehicle"><label for="lt-vehicle"><span class="ic"><svg><use href="#i-car"/></svg></span><strong>Vehicle</strong><small>Car, truck, SUV, van</small></label></div>
+                  <div class="tile"><input type="radio" name="loan_type" id="lt-rec" value="Recreational"><label for="lt-rec"><span class="ic"><svg><use href="#i-boat"/></svg></span><strong>Recreational</strong><small>Boat, RV, ATV, sled</small></label></div>
+                  <div class="tile"><input type="radio" name="loan_type" id="lt-personal" value="Personal"><label for="lt-personal"><span class="ic"><svg><use href="#i-wallet"/></svg></span><strong>Personal loan</strong><small>Cash for what you need</small></label></div>
+                  <div class="tile"><input type="radio" name="loan_type" id="lt-mortgage" value="Mortgage"><label for="lt-mortgage"><span class="ic"><svg><use href="#i-home"/></svg></span><strong>Mortgage</strong><small>Buy, renew or refinance</small></label></div>
+                  <div class="tile wide"><input type="radio" name="loan_type" id="lt-debt" value="Debt consolidation"><label for="lt-debt"><span class="ic"><svg><use href="#i-merge"/></svg></span><span><strong>Debt consolidation</strong><br><small>Roll several payments into one</small></span></label></div>
+                </div>
+                <span class="err" id="err-loan_type"></span>
+              </fieldset>
+              <div class="nav">
+                <button type="button" class="btn btn-go" data-next>Continue <svg><use href="#i-arrow"/></svg></button>
+              </div>
+              <p class="fineprint"><svg><use href="#i-lock"/></svg>Takes about 60 seconds · No obligation</p>
+            </fieldset>
+
+            <!-- STEP 2 -->
+            <fieldset class="step" data-step="2" data-title="A bit about you" hidden>
+              <fieldset class="q">
+                <legend>Your credit, roughly <span class="hint">(a guess is fine)</span></legend>
+                <div class="chips" id="creditChips">
+                  <div class="chip"><input type="radio" name="credit" id="cr-rebuild" value="Rebuilding (300-559)" data-band="0"><label for="cr-rebuild">Rebuilding <span>300–559</span></label></div>
+                  <div class="chip"><input type="radio" name="credit" id="cr-fair" value="Fair (560-659)" data-band="1"><label for="cr-fair">Fair <span>560–659</span></label></div>
+                  <div class="chip"><input type="radio" name="credit" id="cr-good" value="Good (660-759)" data-band="2"><label for="cr-good">Good <span>660–759</span></label></div>
+                  <div class="chip"><input type="radio" name="credit" id="cr-great" value="Excellent (760-900)" data-band="3"><label for="cr-great">Excellent <span>760–900</span></label></div>
+                  <div class="chip"><input type="radio" name="credit" id="cr-unsure" value="Not sure" data-band="-1"><label for="cr-unsure">Not sure</label></div>
+                </div>
+                <div aria-hidden="true">
+                  <div class="scale" id="scale"><i></i><i></i><i></i><i></i></div>
+                  <div class="scale-ticks"><span>300</span><span>560</span><span>660</span><span>760</span><span>900</span></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="q">
+                <legend>Employment</legend>
+                <div class="tiles">
+                  <div class="tile"><input type="radio" name="employment" id="em-emp" value="Employed"><label for="em-emp"><span class="ic"><svg><use href="#i-brief"/></svg></span><strong>Employed</strong></label></div>
+                  <div class="tile"><input type="radio" name="employment" id="em-self" value="Self-Employed"><label for="em-self"><span class="ic"><svg><use href="#i-wallet"/></svg></span><strong>Self-employed</strong></label></div>
+                  <div class="tile wide"><input type="radio" name="employment" id="em-new" value="New to Country"><label for="em-new"><span class="ic"><svg><use href="#i-plane"/></svg></span><strong>New to Canada</strong></label></div>
+                </div>
+                <span class="err" id="err-employment"></span>
+              </fieldset>
+
+              <div class="field" id="f-income">
+                <label for="income">Monthly income, before tax</label>
+                <select id="income" name="income" required>
+                  <option value="">Choose a range</option>
+                  <option>Under $2,000</option>
+                  <option>$2,000 – $3,500</option>
+                  <option>$3,500 – $5,000</option>
+                  <option>$5,000+</option>
+                </select>
+                <span class="err" id="err-income"></span>
+              </div>
+
+              <div class="nav">
+                <button type="button" class="btn btn-back" data-back>Back</button>
+                <button type="button" class="btn btn-go" data-next>Continue <svg><use href="#i-arrow"/></svg></button>
+              </div>
+            </fieldset>
+
+            <!-- STEP 3 -->
+            <fieldset class="step" data-step="3" data-title="Where should we send your results?" hidden>
+              <div class="grid2">
+                <div class="field" id="f-first_name"><label for="first_name">First name</label><input id="first_name" name="first_name" autocomplete="given-name" required><span class="err" id="err-first_name"></span></div>
+                <div class="field" id="f-last_name"><label for="last_name">Last name</label><input id="last_name" name="last_name" autocomplete="family-name" required><span class="err" id="err-last_name"></span></div>
+              </div>
+              <div class="field" id="f-email"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required><span class="err" id="err-email"></span></div>
+              <div class="grid2">
+                <div class="field" id="f-phone"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="416-555-0123" required><span class="err" id="err-phone"></span></div>
+                <div class="field" id="f-postal"><label for="postal">Postal code</label><input id="postal" name="postal_code" autocomplete="postal-code" placeholder="M5V 2T6" maxlength="7" style="text-transform:uppercase" required><span class="err" id="err-postal"></span></div>
+              </div>
+              <div class="field"><label for="notes">Anything we should know? <span class="hint">Optional</span></label><textarea id="notes" name="notes" placeholder="e.g. looking for a 2021 RAV4, had a consumer proposal in 2022"></textarea></div>
+
+              <label class="consent" for="consent"><input type="checkbox" id="consent" name="consent" required><span>I agree to be contacted by This Dealership and its lending partners about my request by phone, text or email. I can withdraw consent at any time.</span></label>
+              <span class="err" id="err-consent"></span>
+
+              <div class="nav">
+                <button type="button" class="btn btn-back" data-back>Back</button>
+                <button type="submit" class="btn btn-go" id="submitBtn">See if I qualify <svg><use href="#i-arrow"/></svg></button>
+              </div>
+              <p class="fineprint"><svg><use href="#i-lock"/></svg>Design preview · Nothing you type is sent</p>
+            </fieldset>
+          </form>
+
+          <div class="done" id="done" hidden tabindex="-1">
+            <div class="done-badge"><svg><use href="#i-check"/></svg></div>
+            <h2 id="doneTitle">You’re in. We’re on it.</h2>
+            <p>A specialist will review your request and contact you to go over your options. Want to move faster? Call us now.</p>
+            <a class="btn btn-green" href="tel:+15555550100"><svg><use href="#i-phone"/></svg>555-555-0100</a>
+          </div>
+        </div>
+        <p class="legal">Pre-qualification is not a guarantee of financing approval. Final approval, rate and terms are subject to lender review. All financing on approved credit (O.A.C.).</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><i><svg><use href="#i-clock"/></svg></i>Pre-qualify in about 60 seconds</div>
+      <div class="stat"><i><svg><use href="#i-check"/></svg></i>Three quick steps, then you’re done</div>
+      <div class="stat"><i><svg><use href="#i-gauge"/></svg></i>No impact on your credit score</div>
+      <div class="stat"><i><svg><use href="#i-lock"/></svg></i>All financing on approved credit</div>
+    </div>
+  </div>
+
+  <section class="band band-soft" id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Who we help</span>
+        <h2>Your situation isn’t a <em>dealbreaker</em> here.</h2>
+        <p>Banks look at a score. We look at the whole picture, and work with top lenders to help find the options available to you.</p>
+      </div>
+      <div class="situations">
+        <div class="sit"><span class="ic"><svg><use href="#i-gauge"/></svg></span><h3>Bad or no credit</h3><p>Missed payments, collections, or no history at all. Good or bad, we work with it.</p></div>
+        <div class="sit"><span class="ic"><svg><use href="#i-brief"/></svg></span><h3>Self-employed</h3><p>Contractors, gig workers, owners. Income that doesn’t fit a T4 is no problem.</p></div>
+        <div class="sit"><span class="ic"><svg><use href="#i-plane"/></svg></span><h3>New to Canada</h3><p>Just arrived and building Canadian credit? There are options for you.</p></div>
+        <div class="sit"><span class="ic"><svg><use href="#i-clock"/></svg></span><h3>Need it quickly</h3><p>We get your application in front of lenders fast and keep you posted at every step.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From form to keys in <em>three steps.</em></h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Tell us what you need</h3><p>Answer a few quick questions. About 60 seconds, no credit check to start.</p></li>
+        <li><h3>A specialist calls you</h3><p>We review your details and send your application to the lenders that best fit your situation.</p></li>
+        <li><h3>Pick your offer</h3><p>Compare your options with zero obligation. You only move forward if it works for you.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="faq">
+    <div class="wrap faq-grid">
+      <div class="faq-side">
+        <div class="sec-head">
+          <span class="eyebrow">Questions</span>
+          <h2>Straight answers.</h2>
+          <p>Still unsure? Talk to a real person. No pressure, no obligation.</p>
+        </div>
+        <a class="helpcard" href="tel:+15555550100"><i><svg><use href="#i-phone"/></svg></i><span>Call a specialist<strong>555-555-0100</strong></span></a>
+      </div>
+      <div class="faq">
+        <details><summary>Will filling this out hurt my credit score?</summary><p>No. Checking your options here won’t affect your credit score. A lender only runs a full credit check later, if you choose to move ahead with an application.</p></details>
+        <details><summary>Are you a lender?</summary><p>No. We’re a registered motor vehicle dealer. Financing is provided by third-party lenders, and every application is subject to lender review and approval. Rates and terms vary by lender and by applicant.</p></details>
+        <details><summary>I’m self-employed. What will I need?</summary><p>Usually proof of income such as recent bank statements or tax filings (like your Notice of Assessment). Your specialist will tell you exactly what the lender needs.</p></details>
+        <details><summary>Do I need a down payment?</summary><p>Down payment requirements vary by lender and by applicant, and are determined when your application is reviewed. Your specialist will go through the options available to you.</p></details>
+        <details><summary>Am I obligated to go ahead?</summary><p>Not at all. There’s no obligation and no cost to pre-qualify, and pre-qualifying is not an approval. Your information stays confidential.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="closer">
+      <div>
+        <h2>See your options in about 60 seconds.</h2>
+        <p>Good or bad credit. Self-employed or new to Canada. Checking won’t affect your credit score.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-green" href="#apply">Check my options <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+15555550100">Call 555-555-0100</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <nav><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></nav>
+    </div>
+    <div class="dealer">
+      <span class="tag">Dealership tagline goes here</span>
+      <span><b>This Dealership</b></span>
+      <span>Owner name, title</span>
+      <span>Street address, city, province, postal code</span>
+      <span>555-555-0100 · <a href="mailto:email@example.com">email@example.com</a> · <a href="https://example.ca">example.ca</a></span>
+    </div>
+    <p>We are not a lender. Financing is provided by third-party lenders and all financing is on approved credit (O.A.C.). Pre-qualification is not a guarantee of financing approval. Final approval, rate and terms are subject to lender review, and vary by lender and by applicant. © 2026. All rights reserved. Design preview: this form doesn’t send or store any information.</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn btn-call" href="tel:+15555550100" aria-label="Call 555-555-0100"><svg><use href="#i-phone"/></svg></a>
+  <a class="btn btn-go" href="#apply">Check my options <svg><use href="#i-arrow"/></svg></a>
+</div>
+
+<script>
+/* ============================================================
+   WIRE UP YOUR BACKEND HERE
+   Set FORM_ENDPOINT to where leads should go (your current form
+   handler, Formspree, Zapier webhook, etc). Data is POSTed as
+   form-encoded fields. Leave empty to test without sending.
+   ============================================================ */
+const FORM_ENDPOINT = "";
+
+(function(){
+  const form = document.getElementById('preQual');
+  const steps = [...form.querySelectorAll('.step[data-step]')];
+  const bars = [...document.querySelectorAll('.progress span')];
+  const title = document.getElementById('stepTitle');
+  const count = document.getElementById('stepCount');
+  let current = 0;
+
+  function setErr(id, msg){
+    const el = document.getElementById('err-' + id);
+    if (el) el.textContent = msg || '';
+    const f = document.getElementById('f-' + id);
+    if (f) f.classList.toggle('invalid', !!msg);
+  }
+  const val = n => (form.elements[n] && form.elements[n].value || '').trim();
+  const checked = n => !!form.querySelector('input[name="'+n+'"]:checked');
+
+  const rules = {
+    1: () => checked('loan_type') ? [] : [['loan_type','Pick the type of loan you’re looking for.']],
+    2: () => {
+      const e = [];
+      if (!checked('employment')) e.push(['employment','Choose your employment situation.']);
+      if (!val('income')) e.push(['income','Choose an income range. An estimate is fine.']);
+      return e;
+    },
+    3: () => {
+      const e = [];
+      if (!val('first_name')) e.push(['first_name','Enter your first name.']);
+      if (!val('last_name')) e.push(['last_name','Enter your last name.']);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val('email'))) e.push(['email','Enter an email like name@example.com.']);
+      const digits = val('phone').replace(/\D/g,'').replace(/^1(?=\d{10}$)/,'');
+      if (digits.length !== 10) e.push(['phone','Enter a 10-digit phone number.']);
+      if (!/^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z] ?\d[ABCEGHJ-NPRSTV-Z]\d$/i.test(val('postal_code'))) e.push(['postal','Enter a Canadian postal code like M5V 2T6.']);
+      if (!form.elements.consent.checked) e.push(['consent','Tick the box so we can contact you with your results.']);
+      return e;
+    }
+  };
+  const allIds = ['loan_type','employment','income','first_name','last_name','email','phone','postal','consent'];
+
+  function validate(stepNo){
+    const errs = rules[stepNo]();
+    allIds.forEach(id => setErr(id, ''));
+    errs.forEach(([id,msg]) => setErr(id,msg));
+    if (errs.length){
+      const id = errs[0][0];
+      const target = document.getElementById(id) || form.querySelector('input[name="'+id+'"]');
+      if (target) target.focus();
+    }
+    return errs.length === 0;
+  }
+
+  function show(i){
+    steps[current].hidden = true;
+    current = i;
+    steps[i].hidden = false;
+    title.textContent = steps[i].dataset.title;
+    count.textContent = 'Step ' + (i+1) + ' of ' + steps.length;
+    bars.forEach((b,k) => b.classList.toggle('on', k <= i));
+    const card = document.getElementById('apply');
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({block:'start'});
+    const first = steps[i].querySelector('input,select');
+    if (first && i > 0) setTimeout(() => first.focus({preventScroll:true}), 50);
+  }
+
+  form.addEventListener('click', e => {
+    if (e.target.closest('[data-next]')) { if (validate(current+1)) show(current+1); }
+    if (e.target.closest('[data-back]')) show(current-1);
+  });
+
+  form.querySelectorAll('input[name="loan_type"]').forEach(r => r.addEventListener('change', () => {
+    setErr('loan_type','');
+    setTimeout(() => { if (current === 0) show(1); }, 240);
+  }));
+  form.querySelectorAll('input[name="employment"]').forEach(r => r.addEventListener('change', () => setErr('employment','')));
+
+  const scaleBars = [...document.querySelectorAll('#scale i')];
+  document.getElementById('creditChips').addEventListener('change', e => {
+    const b = +e.target.dataset.band;
+    scaleBars.forEach((s,k) => s.classList.toggle('lit', k === b));
+  });
+
+  const phone = document.getElementById('phone');
+  phone.addEventListener('input', () => {
+    let d = phone.value.replace(/\D/g,'');
+    if (d.length === 11 && d[0] === '1') d = d.slice(1);
+    d = d.slice(0,10);
+    phone.value = d.length > 6 ? d.slice(0,3)+'-'+d.slice(3,6)+'-'+d.slice(6) : d.length > 3 ? d.slice(0,3)+'-'+d.slice(3) : d;
+  });
+  const postal = document.getElementById('postal');
+  postal.addEventListener('input', () => {
+    let v = postal.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
+    postal.value = v.length > 3 ? v.slice(0,3)+' '+v.slice(3) : v;
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!validate(3)) return;
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true; btn.firstChild.textContent = 'Sending… ';
+    const data = new FormData(form);
+    try {
+      if (FORM_ENDPOINT) {
+        const res = await fetch(FORM_ENDPOINT, {method:'POST', body:data, headers:{Accept:'application/json'}});
+        if (!res.ok) throw new Error(res.status);
+      } else {
+        /* preview: nothing is sent */
+      }
+      form.hidden = true;
+      document.getElementById('applyHead').hidden = true;
+      const done = document.getElementById('done');
+      document.getElementById('doneTitle').textContent = 'Thanks, ' + val('first_name') + '. We’re on it.';
+      done.hidden = false; done.focus();
+    } catch(err) {
+      btn.disabled = false; btn.firstChild.textContent = 'See if I qualify ';
+      setErr('consent','Your request didn’t send. Check your connection and try again, or call 555-555-0100.');
+    }
+  });
+
+  // Hide mobile dock while the form is on screen
+  const dock = document.getElementById('dock');
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(([en]) => dock.classList.toggle('away', en.isIntersecting), {threshold:.15}).observe(document.getElementById('apply'));
+  }
+})();
+</script>
+</body>
+</html>
